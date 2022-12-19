@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrate
+@model List<Personel>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<div class="container">
+    <div class="p-5 w-50 mx-3">
+
+        <a href="/Personel/Add" class="btn btn-primary">Add Personel</a>
+        <a href="/Personel/Delete" class="btn btn-primary">Delete Personel</a>
+        <a href="/Personel/Update" class="btn btn-primary">Update Personel</a>
+    </div>
+    <br />
+
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Personel Id</th>
+                <th>Personel Name</th>
+                <th>Personel Surname</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+
+        {
+            <tbody>
+                <tr>
+                    <td>@item.personel_id</td>
+                    <td>@item.personel_name</td>
+                    <td>@item.personel_surname</td>
+                </tr>
+            </tbody>
+
+        }
+
+
+
+    </table>
+
+
+
+</div>
